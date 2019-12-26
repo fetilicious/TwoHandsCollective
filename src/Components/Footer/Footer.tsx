@@ -4,7 +4,11 @@ import './Footer.css';
 class Footer extends React.Component {
     render() {
       return <div className="Footer">
-          Founded by Brooke Cheng and <a href="http://liacoleman.com"> Lia Coleman</a>
+          <div className="LiaText">Founded by Lia Coleman </div>
+          <a className="IconLink" href="http://liacoleman.com"><i className="fas fa-globe"></i></a>
+          <a className="IconLink" href="https://www.instagram.com/liacole7/"><i className="fab fa-instagram"></i></a>
+          <div className="BrookeText">and Brooke Cheng</div>
+          <a className="IconLink" href="https://www.instagram.com/brooke.cheng.photography/"><i className="fab fa-instagram"></i></a>
         </div>
     }
 }
