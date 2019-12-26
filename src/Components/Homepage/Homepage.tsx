@@ -6,7 +6,7 @@ class Homepage extends React.Component {
       return <div className="HomePage">
         <p className="TwoHandsLogo"/>
         <div className="Title">
-            Two Hands Collective
+            TWO HANDS COLLECTIVE
         </div>
         <div className="Subtitle">
             Coming Soon
