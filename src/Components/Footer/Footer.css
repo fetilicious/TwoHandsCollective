@@ -1,16 +1,4 @@
-
-
-.TwoHandsLogo {
-    background-image:url('./../../Images/TwoHands.png');
-    background-repeat:no-repeat;
-    background-size: contain;
-    background-position: center center;
-    height: 45vh;
-    width: 100%;
-}
-
 .Footer {
-    background: #212121;
     position: relative;
     left: 0;
     bottom: 0;
