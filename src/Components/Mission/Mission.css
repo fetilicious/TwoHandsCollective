@@ -1,0 +1,15 @@
+.MissionContainer {
+    height: 100vh;
+    background-color: red;
+    width: 100%;
+}
+
+.MissionTitle {
+    padding-top: 49vh;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    font-size: 40px;
+    width: 100%;
+}

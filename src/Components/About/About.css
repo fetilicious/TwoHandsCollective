@@ -1,0 +1,15 @@
+.AboutContainer {
+    height: 100vh;
+    background-color: purple;
+    width: 100%;
+}
+
+.AboutTitle {
+    padding-top: 49vh;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    font-size: 40px;
+    width: 100%;
+}
