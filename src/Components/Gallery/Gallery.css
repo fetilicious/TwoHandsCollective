@@ -1,11 +1,10 @@
 .GalleryContainer {
-    height: 200vh;
-    background-color: blue;
+    height: 90vh;
     width: 100%;
 }
 
 .GalleryTitle {
-    padding-top: 99vh;
+    padding-top: 30vh;
     align-content: center;
     text-align: center;
     vertical-align: middle;

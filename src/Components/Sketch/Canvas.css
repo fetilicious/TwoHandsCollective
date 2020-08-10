@@ -1,11 +1,9 @@
-
-
 .SketchContainer {
     background:#212121;
     background-size: 100% auto;
     background-position: top 15em;
-    position: absolute;
-    height: 105vh;
+    position: fixed;
+    height: 100vh;
     width: 100%;
-    z-index: -1;
+    z-index: -100;
 }

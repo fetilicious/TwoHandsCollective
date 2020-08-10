@@ -1,46 +1,43 @@
 import React from 'react';
 import Sketch from 'react-p5';
+import Boid from './Boids'
 import './Canvas.css';
 
 class Canvas extends React.Component {
     render() {
-        let pts = [];
+        let boids = [];
+        let globalScale = 1.5;
         return (
         <div className="SketchContainer">
             <Sketch
             setup={
               (p5, canvasParentRef) => {
+                p5.createCanvas(p5.windowWidth, p5.windowHeight);
+                p5.colorMode(p5.HSB, 360, 300/globalScale, 300/globalScale);
+              
+                for (let i = 0; i < 100; i++) {
+                  let xpos = Math.random() * p5.windowWidth;
+                  let ypos = Math.random() * p5.windowHeight;
+                  let boid = new Boid(xpos, ypos);
+                  boids.push(boid);
+                }
                 p5.createCanvas(p5.windowWidth, p5.windowHeight).parent(canvasParentRef);
             }}
             draw={
                 p5 => {
-                      var startRad = 50;
-                      var curPt = p5.createVector(p5.mouseX, p5.mouseY, startRad);
-                      pts.push(curPt);
-                      if(pts.length > 50){
-                        pts.shift(); //rm head
-                      }
-
-                      p5.background(33, 33, 33);
-
-                      for (var i = 0; i < pts.length; i++){
-                        p5.stroke(50);
-
-                        p5.circle(
-                          pts[i].x,
-                          pts[i].y,
-                          pts[i].z--,
-                        );
-
-                        // p5.line(
-                        //   p5.windowWidth / 2., p5.windowHeight / 2., 
-                        //   pts[i].x, pts[i].y
-                        // );
-                      }
-
-                      if(p5.mouseIsPressed){
-                        pts = [];
-                      }
+                      p5.background('rgba(33, 33, 33, 0.01)');
+                      boids.forEach(boid => {
+                        boid.calculateNewVelocity(boids);
+                        boid.calculateNewPosition();
+                    
+                        let hslValue = 180 + Math.atan2(boid.velocity.vx, boid.velocity.vy)*180/Math.PI;
+                        let velocity = Math.sqrt(boid.velocity.vx*boid.velocity.vx + boid.velocity.vy*boid.velocity.vy);
+                        //let velocityAngle = Math.atan2(boid.velocity.vx, boid.velocity.vy);
+                        p5.fill(hslValue, velocity, velocity);
+                        p5.stroke(hslValue, velocity, velocity);
+                    
+                        p5.circle(boid.xposition, boid.yposition, 10/globalScale);
+                      });
                 }
             }
 		/>

@@ -1,7 +1,10 @@
 .MissionContainer {
-    height: 100vh;
-    background-color: red;
-    width: 100%;
+    height: 90vh;
+    background-color: 	#0d0d3f;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 .MissionTitle {
@@ -12,4 +15,118 @@
     color: white;
     font-size: 40px;
     width: 100%;
+    opacity: 1;
+    transition-duration: 8000ms;
+    transition-property: opacity;
+}
+
+.MissionPages {
+    opacity: 0;
+    transition-duration: 8000ms;
+    transition-property: opacity;
+}
+
+.MissionText {
+    line-height: 90vh;
+    width: 100%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5vw;
+    position: absolute;
+    color: white;
+}
+
+.Word {
+    font-size: 4vw;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    color: white;
+    top: 75%;
+    letter-spacing: 0.2em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.MissionPageHiddenRight {
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: .3s ease-out;
+    position: absolute;
+}
+
+.MissionPageHiddenLeft {
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: .3s ease-out;
+    position: absolute;
+}
+
+.MissionPage {
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(0%);
+    transition: .3s ease-out;
+    position: absolute;
+}
+
+.MissionImage {
+    top: 10%;
+    position: fixed;
+    height: 60vh;
+    width: 60vh;
+    border-radius: 50%;
+    margin-left: -30vh;
+    position: absolute;
+}
+
+.ChevronContainerLeft {
+    top: 45vh;
+    left: 0px;
+    position: absolute;
+    font-size: 5em;
+    width: 15vw;
+    height: 100%;
+    z-index: 100;
+    cursor: pointer;
+    color: #1377ba;
+}
+
+.ChevronContainerRight {
+    top: 45vh;
+    right: 0px;
+    position: absolute;
+    font-size: 5em;
+    width: 15vw;
+    height: 100%;
+    z-index: 100;
+    cursor: pointer;
+    color: #1377ba;
+}
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+.ChevronContainerRight:hover {
+    animation: shake 2.5s infinite;
+}
+
+.ChevronContainerLeft:hover {
+    animation: shake 2.5s infinite;
 }

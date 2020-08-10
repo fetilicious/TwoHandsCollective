@@ -7,14 +7,11 @@ const Sketch = require('react-p5');
 class Homepage extends React.Component {
     render() {
       return <div className="HomePage">
-        <Canvas></Canvas>
         <p className="TwoHandsLogo"/>
         <div className="Title">
             TWO HANDS COLLECTIVE
         </div>
-        <div className="Subtitle">
-            Coming Soon
-        </div>
+        <div className="ChevronContainer"><i className="fa fa-chevron-down"></i></div>
         </div>
     }
 }
