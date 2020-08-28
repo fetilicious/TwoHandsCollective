@@ -1,14 +1,18 @@
 .GalleryContainer {
     height: 90vh;
     width: 100%;
+    padding-top: 200px;
+    position: relative;
 }
 
 .GalleryTitle {
-    padding-top: 30vh;
     align-content: center;
     text-align: center;
     vertical-align: middle;
     color: white;
     font-size: 40px;
     width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 6vw;
+    top: 100px;
 }

@@ -8,7 +8,7 @@
 }
 
 .MissionTitle {
-    padding-top: 49vh;
+    top: 49vh;
     align-content: center;
     text-align: center;
     vertical-align: middle;
@@ -24,22 +24,25 @@
     opacity: 0;
     transition-duration: 8000ms;
     transition-property: opacity;
+    padding-top: 130px;
 }
 
 .MissionText {
-    line-height: 90vh;
+    top: 40vh;
     width: 100%;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 5vw;
-    position: absolute;
     color: white;
+    position: absolute;
+    transition-duration: 1500ms;
+    transition-property: opacity;
 }
 
 .Word {
     font-size: 4vw;
+    padding-top: 30px;
     width: 100%;
-    position: fixed;
     text-align: center;
     color: white;
     top: 75%;
@@ -65,41 +68,39 @@
 
 .MissionPage {
     width: 100vw;
-    height: 100vh;
     transform: translateX(0%);
     transition: .3s ease-out;
     position: absolute;
 }
 
 .MissionImage {
-    top: 10%;
-    position: fixed;
-    height: 60vh;
-    width: 60vh;
+    height: 50vw;
+    width: 50vw;
+    max-width: 470px;
+    max-height: 470px;
     border-radius: 50%;
-    margin-left: -30vh;
-    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 .ChevronContainerLeft {
-    top: 45vh;
+    top: 40vh;
     left: 0px;
     position: absolute;
     font-size: 5em;
     width: 15vw;
-    height: 100%;
     z-index: 100;
     cursor: pointer;
     color: #1377ba;
 }
 
 .ChevronContainerRight {
-    top: 45vh;
+    top: 40vh;
     right: 0px;
     position: absolute;
     font-size: 5em;
     width: 15vw;
-    height: 100%;
     z-index: 100;
     cursor: pointer;
     color: #1377ba;
@@ -129,4 +130,32 @@
 
 .ChevronContainerLeft:hover {
     animation: shake 2.5s infinite;
+}
+
+@media only screen and (max-width: 800px) {
+    .MissionPages {
+        padding-top: 200px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .ChevronContainerLeft {
+        top: 42vh;
+        font-size: 3em;
+    }
+    
+    .ChevronContainerRight {
+        top: 42vh;
+        font-size: 3em;
+    }
+
+    .MissionPages {
+        padding-top: 200px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .MissionPages {
+        padding-top: 250px;
+    }
 }
